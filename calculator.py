@@ -19,10 +19,8 @@ def calculate(sign, first_num, second_num):
         result = first_num * second_num
     elif sign == '-':
         result = first_num - second_num
-    elif sign == '+':
-        result = first_num + second_num
     else:
-        return -1
+        result = first_num + second_num
     return result
 
 
@@ -59,15 +57,10 @@ def main():
                 result_user = calculate(sign_user,
                                         first_num_float, second_num_float)
 
-                # checks what to display to user
-                if calculate(sign_user, first_num_float,
-                             second_num_float) == -1:
-                    print("Invalid input!")
-                else:
-                    print("")
-                    print("The result of {:,.2f} {} {:,.2f} is {:,.2f}"
-                          .format(first_num_float, sign_user,
-                                  second_num_float, result_user))
+                # display results to user
+                print("The result of {:,.2f} {} {:,.2f} is {:,.2f}"
+                      .format(first_num_float, sign_user,
+                              second_num_float, result_user))
 
             # catches any entered strings
             except Exception:
